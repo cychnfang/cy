@@ -1,0 +1,48 @@
+{
+  "name": "create-cy",
+  "version": "1.0.6",
+  "type": "module",
+  "license": "MIT",
+  "author": "CyFang",
+  "bin": {
+    "create-cy": "index.js",
+    "cva": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template-vue-ts",
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "",
+    "directory": "packages/create-cy"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "funding": "",
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.6",
+    "@types/minimist": "^1.2.5",
+    "@types/prompts": "^2.4.9",
+    "cross-spawn": "^7.0.3",
+    "minimist": "^1.2.8",
+    "picocolors": "^1.1.0",
+    "unbuild": "^2.0.0"
+  },
+  "dependencies": {
+    "create-cy": "^1.0.0",
+    "prompts": "^2.4.2"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "cy",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "simple-git-hooks",
+    "lint": "eslint --cache .",
+    "format": "prettier --write --cache .",
+    "build": "pnpm -r --filter='./packages/*' run build",
+    "dev": "pnpm -r --parallel --filter='./packages/*' run dev",
+    "release": "tsx scripts/release.ts",
+    "verify-commit": "tsx scripts/verify-commit.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@pnpm/find-workspace-packages": "^6.0.9",
+    "@types/node": "^22.7.2",
+    "eslint": "^9.11.1",
+    "inquirer": "^11.0.2",
+    "lint-staged": "^15.2.10",
+    "picocolors": "^1.1.0",
+    "prettier": "^3.3.3",
+    "simple-git-hooks": "^2.11.1",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.7.0",
+    "vitest": "^2.1.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "pnpm run verify-commit"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ],
+    "packages/*/{src,types}/**/*.ts": [
+      "eslint --cache --fix"
+    ],
+    "packages/**/*.d.ts": [
+      "eslint --cache --fix"
+    ]
+  }
+}
