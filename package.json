@@ -5,6 +5,10 @@
   "private": false,
   "main": "index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cychnfang/cy"
+  },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks",
