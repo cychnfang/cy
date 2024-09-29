@@ -54,7 +54,7 @@ const FRAMEWORKS: Framework[] = [
     color: green,
     variants: [
       {
-        name: 'vue3-ts',
+        name: 'vue-ts',
         display: 'TypeScript',
         color: blue,
       },
