@@ -23,6 +23,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.27.8",
     "@pnpm/find-workspace-packages": "^6.0.9",
     "@types/node": "^22.7.2",
     "eslint": "^9.11.1",
@@ -30,6 +31,7 @@
     "lint-staged": "^15.2.10",
     "picocolors": "^1.1.0",
     "prettier": "^3.3.3",
+    "semver": "^7.6.3",
     "simple-git-hooks": "^2.11.1",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2",
